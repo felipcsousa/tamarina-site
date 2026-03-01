@@ -31,24 +31,25 @@
 
 ```
 tamarina-site/
-├── web/                          # Aplicação Next.js
-│   ├── src/
-│   │   ├── app/                  # App Router
-│   │   │   ├── page.tsx          # Página inicial
-│   │   │   ├── layout.tsx        # Layout raiz
-│   │   │   ├── error.tsx         # Página de erro
-│   │   │   ├── loading.tsx       # Loading state
-│   │   │   └── roteiros/         # Páginas de destinos
-│   │   │       ├── ouro-preto/
-│   │   │       ├── paraty/
-│   │   │       └── lencois-maranhenses/
-│   │   └── app/
-│   │       └── globals.css       # Estilos globais
-│   ├── public/                   # Assets estáticos
-│   │   └── images/               # Imagens e logos
-│   └── package.json              # Dependências
-├── assets-marca/                 # Assets de design (não versionado)
-└── README.md                     # Este arquivo
+├── src/
+│   ├── app/                  # App Router
+│   │   ├── page.tsx          # Página inicial
+│   │   ├── layout.tsx        # Layout raiz
+│   │   ├── error.tsx         # Página de erro
+│   │   ├── loading.tsx       # Loading state
+│   │   ├── globals.css       # Estilos globais
+│   │   └── roteiros/         # Páginas de destinos
+│   │       ├── ouro-preto/
+│   │       ├── paraty/
+│   │       └── lencois-maranhenses/
+│   └── ...
+├── public/                   # Assets estáticos
+│   └── images/               # Imagens e logos
+├── package.json              # Dependências
+├── next.config.ts            # Configuração Next.js
+├── tsconfig.json             # Configuração TypeScript
+├── tailwind.config.ts        # Configuração Tailwind
+└── README.md                 # Este arquivo
 ```
 
 ## 🚀 Como Executar
@@ -63,7 +64,7 @@ tamarina-site/
 1. **Clone o repositório:**
 ```bash
 git clone https://github.com/felipcsousa/tamarina-site.git
-cd tamarina-site/web
+cd tamarina-site
 ```
 
 2. **Instale as dependências:**
@@ -132,7 +133,7 @@ Este projeto está configurado para deploy na [Vercel](https://vercel.com/).
 ### Deploy na Vercel
 
 1. Importe o repositório na Vercel
-2. Configure o diretório raiz como `web/`
+2. O framework será detectado automaticamente (Next.js)
 3. Deploy automático a cada push na branch `main`
 
 **URL de Produção:** [https://tamarina-site.vercel.app](https://tamarina-site.vercel.app) *(exemplo)*
